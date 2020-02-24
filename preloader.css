@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.preloader > .arc{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.preloader > .arc.wall{
+    border: 100px solid white;
+    border-color: white transparent;
+}
+
+.preloader > .arc.rotar{
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    margin: 1px;
+    border: 6px solid rgb(186, 10, 255);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: anime-rotate 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+@keyframes anime-rotate {
+    from {
+      transform:rotate(45deg);
+    }
+    to {
+      transform:rotate(225deg);
+    }
+  }

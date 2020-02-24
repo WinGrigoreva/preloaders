@@ -1,0 +1,90 @@
+body{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containter{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.preloader > .containter > .circle{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    /* border-radius: 50%; */
+    box-sizing: border-box;
+    /* transform: rotate(45deg); */
+    transform-origin: 70px 70px;
+    animation: anime-circle 5s ease-in-out infinite, anime-color 20s linear infinite;
+}
+
+@keyframes anime-circle {
+    from {
+      transform:rotate(45deg);
+    }
+    10% {
+        transform:rotate(45deg);
+    }
+     90%{
+        transform:rotate(405deg);
+    }
+    to {
+      transform:rotate(405deg);
+    }
+}
+
+@keyframes anime-color{
+    0% {
+        background: rgb(62, 190, 190);
+    }
+    12.5% {
+        background: rgb(62, 92, 190);
+    }
+    25% {
+        background: rgb(169, 62, 190);
+    }
+    37.5% {
+        background: rgb(190, 62, 90);
+    }
+    50% {
+        background: rgb(190, 109, 62);
+    }
+    62.5% {
+        background: rgb(181, 190, 62);
+    }
+    75% {
+        background: rgb(98, 190, 62);
+    }
+    87.5% {
+        background: rgb(62, 190, 105);
+    }
+    100% {
+        background: rgb(62, 190, 190);
+    }
+}
+
+.preloader > .containter > .circle:nth-child(2){
+    animation-delay: .2s;
+}
+.preloader > .containter > .circle:nth-child(3){
+    animation-delay: .4s;
+}
+.preloader > .containter > .circle:nth-child(4){
+    animation-delay: .6s;
+}
+.preloader > .containter > .circle:nth-child(5){
+    animation-delay: .8s;
+}
+.preloader > .containter > .circle:nth-child(6){
+    animation-delay: 1s;
+}
+.preloader > .containter > .circle:nth-child(7){
+    animation-delay: 1.2s;
+}
+.preloader > .containter > .circle:nth-child(8){
+    animation-delay: 1.4s;
+}
